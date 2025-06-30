@@ -10,15 +10,18 @@
 
 // This is a starter without types //
 // remember argument types and return types //
-function twoFer(){
+function twoFer(name: string = "you"): string {
 
+  return `one for ${name}, one for me`;
 }
 
 /** 
  * uncomment to run and quickly 'test'
- * console.log(twoFer());
- * console.log(twoFer("Elvis"));
-*/
+ * 
+ */
+
+console.log(twoFer());
+console.log(twoFer("Elvis"));
 
 
 
@@ -38,14 +41,16 @@ function twoFer(){
 
 // This is a starter without types //
 // remember argument types and return types //
-function isLeapYear() {
+function isLeapYear(year: number): boolean {
   // some hints //
   // conditional statements are your friend here .. //
+  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 };
 
 /**
  * uncomment to run and quckly test
- * console.log(isLeapYear(2012));
- * console.log(isLeapYear(2013));
-*/
+ */
+console.log(isLeapYear(2012));
+console.log(isLeapYear(2013));
+
 

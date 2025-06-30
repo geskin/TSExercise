@@ -4,7 +4,7 @@
 // Create an empty array of numbers called "ages":
 
 // uncomment and declare //
-// const ages = (What goes here? Remember the type declaration.)
+const ages: number[] = [];
 
 // **********************************************
 // ******************* PART 2 *******************
@@ -13,7 +13,7 @@
 // It should be typed to hold a 2 dimensional array of strings
 
 // uncomment and declare //
-// const gameBoard = (REMEMBER - 2 dimensional array)
+const gameBoard: string[][] = [];
 
 // **********************************************
 // ******************* PART 3 *******************
@@ -23,6 +23,8 @@
 // {name: "coffee mug", price: 11.50}
 type Product = {
   // types here //
+  name: string;
+  price: number;
 };
 // **********************************************
 // ******************* PART 4 *******************
@@ -33,6 +35,14 @@ type Product = {
 // HINTS //
 // 1. Dont forget your types for the arguments and the return type //
 // 2. Maybe a loop for the logic ?
-function getTotal() {
-  
+function getTotal(products: Product[]): number {
+
+  let sum: number = 0;
+
+  for (let i = 0; i < products.length; i++) {
+    sum += products[i].price;
+  }
+
+  return sum;
+
 }
